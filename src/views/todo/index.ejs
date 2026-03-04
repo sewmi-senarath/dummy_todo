@@ -1,0 +1,10 @@
+<h1>Todo App</h1>
+
+<%- include('./add-todo.ejs')  %>
+
+<ol>
+<% todos.forEach((todo, index) => { %>
+    <li><%= todo.task %></li>
+<% }); %>
+
+</ol>

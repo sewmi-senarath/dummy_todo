@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import todoRoutes from './home';
+import todoRoutes from './todo';
 
 const routerTodo = (app:Application) => {
     todoRoutes(app);
