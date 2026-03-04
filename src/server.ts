@@ -1,3 +1,16 @@
-const a:string = '12e';
+import path from 'path';
+import express from 'express';
+import routes from './routes';
 
-console.log(a);
+const app = express();
+
+app.set('layout', 'layout');
+app.set('view engine','ejs');
+
+app.set('views', path.join(__dirname, 'views'));
+
+routes(app);
+
+app.listen(3002, () => {
+    console.log('Listening on port 3002: http://localhost:3002');
+});
