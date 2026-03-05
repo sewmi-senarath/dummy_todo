@@ -1,0 +1,12 @@
+<div style="border-color: aquamarine; border-width: 2px; border-style: dashed; padding: 10px;">
+    <h2>Edit To-Do Form</h2>
+    <form method="post" action="/todo/edit/<%= todo.id %>">
+        <label style="font-size: larger;">Task</label><br>
+        <input type="text" id="task" name="task" value="<%= todo.task %>" style="width: 50%; height: 20px;" placeholder="enter task"><br><br>
+
+        <label style="font-size: larger;">Completed?</label>
+        <input type="checkbox" id="status" name="status" style="width: 15px; height: 15px;" <%= todo.is_completed ? 'checked' : '' %>> <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<div>
+    <h2>Your Todo List</h2>
+    <table border="1" style="padding: 5px; border-collapse: collapse;">
+        <tr>
+            <th>Task No</th>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <% todos.forEach((todo, index) => { %>
+            <tr>
+                <% if(todo.is_completed === true) { %>
+                    <td style="text-decoration: line-through;"><%= index+1 %></td>
+                    <td style="text-decoration: line-through;"><%= todo.task %></td>
+                    <td>Completed</td>
+                <% } else { %>
+                    <td><%= index+1 %></td>
+                    <td><%= todo.task %></td>
+                    <td>Not Completed</td>
+                <% } %>
+                <td>
+                    <a href="/todo/update/<%= todo.id %>">
+                        <button>Edit</button>
+                    </a>
+                    
+                    <form method="post" action="/todo/delete/<%= todo.id %>">
+                        <button type="submit" id="<%= todo.id %>">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+</div>

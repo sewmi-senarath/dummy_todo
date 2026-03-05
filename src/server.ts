@@ -1,11 +1,9 @@
 import "dotenv/config";
-
 import path from 'path';
 import express from 'express';
 import routes from './routes';
 
-
-console.log(process.env.DATABASE_USER);
+// console.log(process.env.DATABASE_USER);
 
 const app = express();
 

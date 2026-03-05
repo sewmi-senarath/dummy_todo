@@ -1,10 +1,9 @@
-<h1>Todo App</h1>
-
-<%- include('./add-todo.ejs')  %>
-
-<ol>
-<% todos.forEach((todo, index) => { %>
-    <li><%= todo.task %></li>
-<% }); %>
-
-</ol>
+<div style="padding: 5px;">
+    <%- include('./add-todo.ejs') %>
+    <br>
+    <hr>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <%- include('./get-todo.ejs') %>
+    </div>
+    
+</div>

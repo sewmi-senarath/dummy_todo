@@ -1,8 +1,8 @@
-import type{Todos} from '../../generated/prisma/client';
+import type { Todos } from "../../generated/prisma/client";
 
-export type {Todos};
+interface TodoType{
+    task: string,
+    is_completed:boolean,
+};
 
-export interface CreateTodo {
-    task: string;
-    is_completed: boolean;
-}
+export type { TodoType, Todos};
